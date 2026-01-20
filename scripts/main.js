@@ -541,3 +541,64 @@ function initServiceModals() {
         }
     });
 }
+
+
+// Featured Video Controls
+function initFeaturedVideoControls() {
+    // Handle featured videos in portfolio page
+    const featuredVideoItems = document.querySelectorAll('.featured-video-item');
+    
+    featuredVideoItems.forEach(item => {
+        const video = item.querySelector('video');
+        const unmuteBtn = item.querySelector('.video-unmute-btn');
+        const icon = unmuteBtn ? unmuteBtn.querySelector('i') : null;
+        
+        if (video && unmuteBtn && icon) {
+            unmuteBtn.addEventListener('click', function() {
+                if (video.muted) {
+                    video.muted = false;
+                    unmuteBtn.classList.add('unmuted');
+                    icon.classList.remove('bi-volume-mute');
+                    icon.classList.add('bi-volume-up');
+                } else {
+                    video.muted = true;
+                    unmuteBtn.classList.remove('unmuted');
+                    icon.classList.remove('bi-volume-up');
+                    icon.classList.add('bi-volume-mute');
+                }
+            });
+        }
+    });
+    
+    // Handle customer experience video in reviews page
+    const customerVideoContainer = document.querySelector('.video-container-featured');
+    
+    if (customerVideoContainer) {
+        const video = customerVideoContainer.querySelector('video');
+        const unmuteBtn = customerVideoContainer.querySelector('.video-unmute-btn');
+        const icon = unmuteBtn ? unmuteBtn.querySelector('i') : null;
+        
+        if (video && unmuteBtn && icon) {
+            unmuteBtn.addEventListener('click', function() {
+                if (video.muted) {
+                    video.muted = false;
+                    unmuteBtn.classList.add('unmuted');
+                    icon.classList.remove('bi-volume-mute');
+                    icon.classList.add('bi-volume-up');
+                } else {
+                    video.muted = true;
+                    unmuteBtn.classList.remove('unmuted');
+                    icon.classList.remove('bi-volume-up');
+                    icon.classList.add('bi-volume-mute');
+                }
+            });
+        }
+    }
+}
+
+// Initialize featured video controls when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFeaturedVideoControls);
+} else {
+    initFeaturedVideoControls();
+}
