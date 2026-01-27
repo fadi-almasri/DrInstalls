@@ -411,7 +411,7 @@ function initServiceModals() {
         },
         'deck': {
             title: 'Deck Construction',
-            image: 'assets/images/original-projects/deck-1.jpg',
+            image: 'assets/images/new-images/deck/FullSizeRender.jpeg',
             description: `
                 <p>Our team can help you design and build a custom deck tailored to your preferences and needs. Whether you're looking for a simple platform deck or a multi-level deck with intricate features, we will provide professional installation to bring your vision to life.</p>
                 
@@ -432,7 +432,7 @@ function initServiceModals() {
         },
         'landscaping': {
             title: 'Landscaping & Final Touches',
-            image: 'assets/images/original-projects/landscaping-1.jpg',
+            image: 'assets/images/new-images/FullSizeRender.jpg',
             description: `
                 <p>We believe that the beauty of your pool extends beyond its blue waters. Introducing our exclusive Final Touches Service – the perfect way to add those essential finishing details to turn your backyard into a true oasis.</p>
                 
